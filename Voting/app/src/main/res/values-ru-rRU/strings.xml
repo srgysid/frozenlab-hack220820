@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources [
+    <!ENTITY appname "Голосуй дома">
+    ]>
+<resources>
+
+    <string name="app_name">&appname;</string>
+
+    <!-- Masks-->
+    <string name="mask_phone">+7 ([000]) [000]-[00]-[00]</string>
+
+    <!-- Formats -->
+    <string name="format_date">dd.MM.yyyy</string>
+    <string name="format_date_short">d MMM</string>
+    <string name="format_date_day_of_week">EE</string>
+    <string name="format_time">HH:mm</string>
+
+    <!-- Templates -->
+    <string name="template_reg_num">Регистрацонный номер: %1$s</string>
+    <string name="template_date">Дата проведения: с %1$s по %2$s</string>
+    <string name="template_type">Тип: %1$s</string>
+    <string name="template_address">Адрес: %1$s</string>
+
+    <!-- Errors-->
+    <string name="error_unknown">Неизвестная ошибка</string>
+    <string name="error_phone_wrong">Телефонный номер указан неверно</string>
+    <string name="error_login">Ошибка авторизации</string>
+    <string name="error_field_blank">Поле не может быть пустым</string>
+    <string name="error_fields_wrong">Некоторые поля заполнены неверно</string>
+    <string name="error_passwords_different">Пароли не совпадают</string>
+    <string name="error_description_blank">Описание услуги не может быть пустым</string>
+    <string name="error_network_connection_failed">Неудалось установить соединение с сервером, возможно отсутствует подключение к сети</string>
+
+    <!-- Other -->
+    <string name="available_phone_formats">Формат номера телефона: +7 *** ***-**-**</string>
+    <string name="repeat">Повторить</string>
+    <string name="ask_restore_lost_connection">Неудалось подключиться к серверу. Повторить?</string>
+    <string name="registration">Регистрация</string>
+    <string name="ask_not_have_account">Еще не с нами?</string>
+    <string name="sign_in">Войти</string>
+    <string name="ask_forgot_password">Забыли пароль?</string>
+    <string name="enter_phone">Введите свой номер телефона</string>
+    <string name="enter_password">Введите свой пароль</string>
+    <string name="no">Нет</string>
+    <string name="yes">Да</string>
+    <string name="phone">Номер телефона</string>
+    <string name="password">Пароль</string>
+    <string name="ok">Ок</string>
+    <string name="registration_number">Регистрационный номер</string>
+    <string name="meetings">Доступные голосования</string>
+    <string name="go_to">Перейти</string>
+    <string name="profile">Профиль</string>
+    <string name="email">Электронный адрес</string>
+    <string name="real_estate">Объект недвижимости</string>
+    <string name="add_real_estate">Добавить еще объект</string>
+    <string name="notifcations">Уведомления</string>
+    <string name="meeting">Голосование</string>
+    <string name="agreed">За</string>
+    <string name="disagreed">Против</string>
+    <string name="refrained">Воздержался</string>
+    <string name="send">Отправить</string>
+
+</resources>

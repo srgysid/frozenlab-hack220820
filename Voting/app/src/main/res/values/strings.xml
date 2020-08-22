@@ -1,0 +1,63 @@
+<!DOCTYPE resources [
+    <!ENTITY appname "Voting home">
+    ]>
+<resources>
+    <string name="default_notification_channel_id" translatable="false">com.frozenlab.voting.default_notification_channel</string>
+    <string name="default_notification_channel_name" translatable="false">Voting default notification channel</string>
+    <string name="app_name">&appname;</string>
+
+    <!-- Masks-->
+    <string name="mask_phone">+7 ([000]) [000]-[00]-[00]</string>
+
+    <!-- Formats -->
+    <string name="format_date">MM/dd/yyyy</string>
+    <string name="format_date_short">MMM, d</string>
+    <string name="format_date_day_of_week">EE</string>
+    <string name="format_time">HH:mm</string>
+
+    <!-- Templates -->
+    <string name="template_reg_num">Registration number: %1$s</string>
+    <string name="template_date">Period: с %1$s по %2$s</string>
+    <string name="template_type">Type: %1$s</string>
+    <string name="template_address">Address: %1$s</string>
+
+    <!-- Errors-->
+    <string name="error_unknown">Unknown error</string>
+    <string name="error_phone_wrong">Phone number is incorrect</string>
+    <string name="error_login">Login fail</string>
+    <string name="error_field_blank">Field can not be blank</string>
+    <string name="error_fields_wrong">Some fields are filled incorrectly</string>
+    <string name="error_passwords_different">Passwords are different</string>
+    <string name="error_description_blank">Description can not be blank</string>
+    <string name="error_network_connection_failed">Network connection failed</string>
+
+    <!-- Other -->
+    <string name="available_phone_formats">Use format: +7 *** ***-**-**</string>
+    <string name="repeat">Repeat</string>
+    <string name="ask_restore_lost_connection">Can\'t connect server. Repeat?</string>
+    <string name="registration">Registration</string>
+    <string name="ask_not_have_account">Not have account?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="ask_forgot_password">Forgot password?</string>
+    <string name="enter_phone">Enter your phone number</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="phone">Phone</string>
+    <string name="password">Password</string>
+    <string name="ok">Ok</string>
+    <string name="registration_number">Registration number</string>
+    <string name="meetings">Meetings</string>
+    <string name="go_to">Go to</string>
+    <string name="profile">Profile</string>
+    <string name="email">Email</string>
+    <string name="real_estate">Estate</string>
+    <string name="add_real_estate">Add new estate</string>
+    <string name="notifcations">Notifications</string>
+    <string name="meeting">Meeting</string>
+    <string name="agreed">Agree</string>
+    <string name="disagreed">Disagree</string>
+    <string name="refrained">Refrained</string>
+    <string name="send">Send</string>
+
+</resources>
