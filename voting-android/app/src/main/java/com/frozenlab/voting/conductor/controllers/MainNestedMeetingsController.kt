@@ -11,7 +11,7 @@ import com.frozenlab.voting.R
 import com.frozenlab.voting.api.models.Meeting
 import com.frozenlab.voting.conductor.controllers.base.BaseController
 import com.frozenlab.voting.databinding.ControllerMainNestedMeetingsBinding
-import com.frozenlab.voting.recycler.MeetingAdapter
+import com.frozenlab.voting.recycler.adapter.MeetingAdapter
 
 class MainNestedMeetingsController: BaseController {
 

@@ -9,7 +9,7 @@ import com.frozenlab.voting.api.models.Answer
 import com.frozenlab.voting.api.models.Question
 import com.frozenlab.voting.conductor.controllers.base.BaseController
 import com.frozenlab.voting.databinding.ControllerMeetingBinding
-import com.frozenlab.voting.recycler.QuestionAdapter
+import com.frozenlab.voting.recycler.adapter.QuestionAdapter
 import com.google.gson.GsonBuilder
 
 class MeetingController: BaseController {

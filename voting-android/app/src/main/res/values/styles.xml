@@ -67,7 +67,7 @@
 
     <style name="AppTheme.Button.Selectable">
         <item name="strokeColor">@color/selector_button_stroke_selected</item>
-        <item name="strokeWidth">4dp</item>
+        <item name="strokeWidth">6dp</item>
     </style>
     <!-- EditText -->
 
