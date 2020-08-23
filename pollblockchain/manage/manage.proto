@@ -1,0 +1,156 @@
+syntax = "proto3";
+
+// protoc --go_out=plugins=grpc:. *.proto
+
+package manage;
+
+message Request {
+	uint32 Key = 1;
+	bytes Data = 2;
+}
+
+message Response {
+	uint32 Key = 1;
+	bytes Data = 2;
+}
+
+message EXTRA {
+	string type = 1;
+	int64 poll_id = 2;
+	string uid = 3; 
+}
+
+message ResponseWide {
+	enum type {
+		EMPTY = 0;
+		FINISH = 1;
+		CREATE = 2;
+		ANSWER = 3;
+	}
+	type Type = 1;
+	uint32 Key = 2;
+	int64 IdPoll = 3;
+	bytes Data = 4;
+}
+
+message COUNTS_VARIANT {
+	int64 id = 1;
+	int32 count = 2;
+	bool free = 3;
+}
+
+message TEXTS_VARIANT {
+	int64 id = 1;
+	repeated bytes hash = 2;
+	repeated string text = 3;
+}
+
+message SummaryAnswersCounts {
+	repeated COUNTS_VARIANT answers_id = 1;
+}
+
+message SummaryAnswersTexts {
+	repeated bytes answerstext_hash = 1;
+	repeated TEXTS_VARIANT answers_id = 2;
+}
+
+message VARIANTS {
+	int64 question_id = 1;
+	repeated COUNTS_VARIANT answers_id = 2;
+	repeated string answer_text = 3;
+	repeated TEXTS_VARIANT free_text = 4;
+}
+
+message Items {
+	string type = 1;
+	int64 poll_id = 2;	
+	repeated VARIANTS items = 3;
+	int32 limitvote = 4;
+}
+
+message PAYLOAD {
+	int64 question_id = 1;
+	string answer_text = 2;
+	repeated int32 variant_items = 3;
+	repeated AnswersFreeText free_text = 4;
+	int32 spent_time = 5;
+}
+
+message AnswersFreeText {
+	int32 answer_id = 1;
+	string answer_text = 2;
+}
+
+message ANSWER {
+	double longitude = 1;
+	double latitude = 2;
+	string uid = 3;
+	repeated PAYLOAD answers = 4;
+}
+
+message Block {
+	int64 timestamp = 1;
+	bytes prevblockhash = 2;
+	ANSWER data = 3;
+	bytes hash = 4;
+}
+
+message Nothing {
+	bool dummy = 1;
+}
+
+message Storage {
+	int64 start = 1;
+	enum side {
+		IN = 0;
+		OUT = 1;
+	}
+	side Side = 2;
+	string type = 3;
+	int64 poll_id = 4;
+	string uid = 5;
+	bytes Data = 6;
+}
+
+message ServiceInformation {
+	repeated string ArrNodes = 1; 
+}
+
+enum TypeQuery {
+  DETAIL = 0;
+  SUMMARY = 1;
+  UNKNOWN = 2;
+}
+
+message RequestAPI {
+	TypeQuery Query = 1;
+	int64 IdPoll = 2;
+	bytes Params = 3;
+}
+
+message ResponseAPI {
+	int64 LastChange = 1;
+	TypeQuery Query = 2;
+	bytes Data = 3;
+	uint64 session = 4;
+}
+
+message TypeServer {
+	string UserAgent = 1;
+	enum side {
+		IN = 0;
+		OUT = 1;
+	}
+	side Side = 2;
+	string type = 3;
+	int64 poll_id = 4;
+	bytes data = 5;
+}
+
+service ManageDataService {
+	rpc GetTypeServer (Nothing) returns (TypeServer) {}
+	rpc SendData (stream Request) returns (stream Response) {}
+	rpc GetData (Request) returns (ResponseWide) {}
+	rpc SendDataAPI (stream ResponseAPI) returns (stream RequestAPI) {}
+	rpc GetDataAPI (RequestAPI) returns (ResponseAPI) {}
+}
